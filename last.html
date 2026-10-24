@@ -78,7 +78,6 @@
             }
         }
 
-        /* Generate 50 sparkles with different positions and animations */
         .magic-sparkles::before,
         .magic-sparkles::after {
             content: '';
@@ -157,13 +156,13 @@
             animation: fadeIn 2s ease 0.5s both;
         }
 
-        /* Enhanced Memory Cards */
+        /* Enhanced Memory Cards - Fixed Grid for 3 columns on desktop */
         .memory-container {
             max-width: 1200px;
             margin: 0 auto;
             padding: 2rem;
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(3, 1fr);
             gap: 2rem;
             z-index: 3;
             position: relative;
@@ -321,15 +320,6 @@
             }
         }
 
-        /* Generate Hearts */
-        .js-generate-hearts {
-            position: fixed;
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-            z-index: 2;
-        }
-
         /* Custom Scrollbar */
         ::-webkit-scrollbar {
             width: 12px;
@@ -345,6 +335,12 @@
         }
 
         /* Responsive Design */
+        @media (max-width: 1024px) {
+            .memory-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
         @media (max-width: 768px) {
             .welcome h1 {
                 font-size: 3rem;
@@ -364,7 +360,6 @@
 <body>
     <div class="magic-sparkles"></div>
     <div class="floating-hearts">
-        <!-- Hearts will be generated via CSS -->
         <div class="heart" style="--float-duration: 6s; --delay: 0s; --translate-x: 20px;">💝</div>
         <div class="heart" style="--float-duration: 8s; --delay: 1s; --translate-x: -30px;">💖</div>
         <div class="heart" style="--float-duration: 7s; --delay: 2s; --translate-x: 40px;">💗</div>
@@ -374,50 +369,48 @@
 
     <section class="welcome">
         <h1>Our Beautiful Moments Together</h1>
-        <p>Every moment spent with you has been magical. Let's cherish these precious memories ...</p>
+        <p>Humaari nayi-nayi pyari si kahani, aur har ek lamha jo mere liye sabse khaas hai... ✨</p>
     </section>
 
     <div class="memory-container">
         <div class="memory-card">
-            <img src="./d1.jpg" alt="First Date" class="memory-img">
-            <div class="memory-date">Her Smile Says It All</div>
-            <div class="memory-caption">You’re truly one of the sweetest girls I know, and I feel lucky to have you in my life.❤️</div>
+            <img src="./d1.jpg" alt="Memory 1" class="memory-img">
+            <div class="memory-date">The Beginning of Us</div>
+            <div class="memory-caption">Jab tumse pehli baar baat hui thi, tabhi pata chal gaya tha ki tum kitni special ho.❤️</div>
         </div>
         <div class="memory-card">
-            <img src="./d2.jpg" alt="Beach Day" class="memory-img">
-            <div class="memory-date">Together Vibes</div>
-            <div class="memory-caption">May your journey ahead be filled with happiness, success, and endless
-                smiles.😊💕</div>
+            <img src="./d2.jpg" alt="Memory 2" class="memory-img">
+            <div class="memory-date">Sweetest Smile</div>
+            <div class="memory-caption">Tumhari yeh muskaan mere din ko aur bhi zyada khoobsurat bana deti hai.😊💕</div>
         </div>
         <div class="memory-card">
-            <img src="./d3.jpg" alt="Movie Night" class="memory-img">
-            <div class="memory-date">Pretty Soul</div>
-            <div class="memory-caption">Keep being the amazing person you are—you make every moment brighter.🌸💖</div>
+            <img src="./d3.jpg" alt="Memory 3" class="memory-img">
+            <div class="memory-date">Precious Moments</div>
+            <div class="memory-caption">Tumhare saath mujhe har ek paal ko mehsus karna hai.🌸💖</div>
         </div>
         <div class="memory-card">
-            <img src="./d4.jpg" alt="Special Moment" class="memory-img">
+            <img src="./d4.jpg" alt="Memory 4" class="memory-img">
             <div class="memory-date">Pure Elegance</div>
-            <div class="memory-caption">Every time I look at you, I fall in love with your simplicity all over again.✨💗</div>
+            <div class="memory-caption">Har baar jab tumhe dekhta hoon, tumse aur bhi zyada pyaar ho jata hai.✨💗</div>
         </div>
         <div class="memory-card">
-            <img src="./d5.jpg" alt="Sweet Memories" class="memory-img">
+            <img src="./d5.jpg" alt="Memory 5" class="memory-img">
             <div class="memory-date">My Favorite Person</div>
-            <div class="memory-caption">Your presence makes everything around me feel so peaceful and beautiful.🌷💞</div>
+            <div class="memory-caption">Tumhari presence se meri dhadkaan bohot tez jati hai.🌷💞</div>
         </div>
         <div class="memory-card">
-            <img src="./d6.jpg" alt="Endless Love" class="memory-img">
+            <img src="./d6.jpg" alt="Memory 6" class="memory-img">
             <div class="memory-date">Forever & Always</div>
-            <div class="memory-caption">Here’s to creating a million more unforgettable memories together.👑❤️</div>
+            <div class="memory-caption">Abhi toh shuruwat hai, aage mil kar dher saari pyaari yaadein banani hain.👑❤️</div>
         </div>
     </div>
 
     <section class="final-message">
-        <h2>Thank You for the Memories</h2>
-        <p>Every laugh, every chat, and every moment we’ve shared has been truly special.💫<br>
-            I’m so grateful for the bond we have, and for the positivity you always bring into my life.<br>
-            On your birthday, I just wish for endless happiness, love, and success to come your way.🌸</p>
-        <p>You deserve all the joy in the world—keep shining and spreading your beautiful energy.✨</p>
-        <a href="#" class="goodbye-btn">Until We Completely Become Wifey 💗 & Hubby 💝</a>
+        <h2>Happy Birthday Papiya! 🎉</h2>
+        <p>Humaari yaadein abhi nayi hain, lekin mere dil mein tumhare liye jo jagah hai woh sabse khaas hai.💫<br>
+            Tumhari yeh zindagi hamesha khushiyon, aur agar tum chaho to pyaar aur dher saari success se bhar jaye.<br>
+            Happy Birthday once again, my love! 🌸</p>
+        <a href="#" class="goodbye-btn"> "Ekta na bola kotha baki thekei jaak pore na hoy bolbo" 💝</a>
     </section>
 </body>
 
